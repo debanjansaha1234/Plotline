@@ -1,0 +1,364 @@
+{
+	"info": {
+		"_postman_id": "46492c3b-f3c4-4758-b92c-02f0bada224d",
+		"name": "Plotline",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19029728",
+		"_collection_link": "https://debanjan-market-api-432719.postman.co/workspace/My-Workspace~0c80df6b-b3e1-4eea-8769-0d0326ff59e2/collection/19029728-46492c3b-f3c4-4758-b92c-02f0bada224d?action=share&source=collection_link&creator=19029728"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Finn Allen\",\r\n    \"email\":\"finallen234@gmail.com\",\r\n    \"password\":\"fin123\",\r\n    \"phone\":\"9334568190\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productName\":\"Comforter\",\r\n    \"price\":400,\r\n    \"quantity\":1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/prod/addproduct",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"prod",
+						"addproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/prod/viewproduct",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"prod",
+						"viewproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serviceName\":\"Game Service\",\r\n    \"price\":\"5000\",\r\n    \"description\":\"The is Game Service and the price is per game cost\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/service/addservice",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"service",
+						"addservice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/service/viewservice",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"service",
+						"viewservice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/user/view",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"view"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add to the cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product\":\"Table Cloth\",\r\n    \"quantity\":\"3\",\r\n    \"service\":\"Logistic Service\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/user/addtocart?email=debanjansaha1234@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"addtocart"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "debanjansaha1234@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove From Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product\":\"Table Cloth\",\r\n    \"service\":\"Logistic Service\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/user/removecart?email=debanjansaha1234@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"removecart"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "debanjansaha1234@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clear Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/user/clearcart?email=debanjansaha1234@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"clearcart"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "debanjansaha1234@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Total Bill",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/user/bill?email=debanjansaha1234@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"bill"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "debanjansaha1234@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Order",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/order/confirm?email=debanjansaha1234@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"confirm"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "debanjansaha1234@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Freedy\",\r\n    \"email\":\"bluststacks@gmail.com\",\r\n    \"password\":\"pass123\",\r\n    \"phone\":\"345533441\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/admin/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View all Orders(Admin)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/admin/vieworder?email=bluststacks@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"vieworder"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "bluststacks@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
